@@ -65,8 +65,8 @@ git branch -M main
 echo [INFO] Current branch status:
 git branch
 
-echo [INFO] Pushing to GitHub...
-git push -u origin main
+echo [INFO] Pushing to GitHub (Force push)...
+git push -f origin main
 
 if %errorlevel% neq 0 (
     echo.
