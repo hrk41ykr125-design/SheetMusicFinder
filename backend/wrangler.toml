@@ -1,6 +1,6 @@
 name = "sheet-music-api"
 main = "app.py"
-compatibility_date = "2024-04-03"
+compatibility_date = "2024-11-01"
 compatibility_flags = ["python_workers"]
 
 [vars]
