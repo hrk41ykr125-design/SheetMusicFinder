@@ -1,7 +1,7 @@
 // API configuration
 const API_BASE_URL = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' 
     ? 'http://127.0.0.1:8000' 
-    : 'https://sheet-music-api.user-subdomain.workers.dev'; // Replace with your actual Worker URL after deployment
+    : 'https://sheet-music-api.hrk41ykr125.workers.dev'; 
 
 document.getElementById('search-form').addEventListener('submit', async (e) => {
     e.preventDefault();
