@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楽譜検索ナビ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <h1>楽譜検索ナビ</h1>
+            <p>国内正規販売サイトからお探しの楽譜を検索します</p>
+        </header>
+
+        <main>
+            <div class="search-panel glass-panel">
+                <form id="search-form" class="search-form">
+                    <div class="form-group">
+                        <label for="song-name">楽曲名</label>
+                        <input type="text" id="song-name" placeholder="例: 点描の唄" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="artist-name">アーティスト名</label>
+                        <input type="text" id="artist-name" placeholder="例: Mrs. GREEN APPLE（任意）">
+                    </div>
+                    <div class="form-group">
+                        <label for="instrument">楽器・編成</label>
+                        <select id="instrument">
+                            <option value="" selected>その他（指定なし）</option>
+                            <option value="ピアノ">ピアノ</option>
+                            <option value="バンドスコア">バンドスコア</option>
+                            <option value="ギター">ギター</option>
+                            <option value="ベース">ベース</option>
+                            <option value="ドラム">ドラム</option>
+                            <option value="管楽器">管楽器</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>検索対象サイト</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="site" value="piascore" checked> Piascore
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="site" value="atelise" checked> ＠ELISE
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="site" value="web_free" checked> Web無料公開楽譜
+                            </label>
+                            <label class="checkbox-label disabled-label">
+                                <input type="checkbox" name="site" value="printgakufu" disabled> ぷりんと楽譜
+                            </label>
+                        </div>
+                        <p class="warning-text">※ぷりんと楽譜はサイトシステム変更のため現在検索できません</p>
+                    </div>
+                    
+                    <button type="submit" class="btn-search">
+                        <span class="btn-text">検索する</span>
+                        <div class="spinner hidden" id="loading-spinner"></div>
+                    </button>
+                </form>
+            </div>
+
+            <div id="results-container" class="results-container">
+                <!-- Results will be injected here -->
+            </div>
+            
+            <div class="disclaimer glass-panel">
+                <h3>⚠️ ご利用にあたって</h3>
+                <ul>
+                    <li>購入には各配信サイトでの会員登録および決済が必要です。</li>
+                    <li>本システムは海外の無料ダウンロードを謳う違法アップロードサイト等への誘導を禁止・除外しています。</li>
+                    <li>該当する編成が見つからない場合は、検索条件を「その他（指定なし）」にして再検索をお試しください。</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
